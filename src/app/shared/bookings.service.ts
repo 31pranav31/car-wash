@@ -2,11 +2,11 @@ import { Booking } from "./booking.model";
 import { Subject } from "rxjs/Subject";
 
 export class BookingsService {
-    bookings:Booking[];
+    bookings:Booking[]=[];
     bookedService = new Subject<Booking[]>();
 
     getBookingsByUser(id:number){
-      var list:Booking[];
+      var list:Booking[] = [];
       for (let book of this.bookings) {
         if(book.user == id)
             list.push(book);
@@ -18,5 +18,5 @@ export class BookingsService {
       this.bookings.push(booking);
       this.bookedService.next(this.bookings.slice());
     }
-    
+
 }

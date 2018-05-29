@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-12">
+      <form [formGroup]="bookingForm" (ngSubmit)="onFormSubmit()">
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Name</label>
+            <input class="form-control" formControlName="name" name="name" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Email</label>
+            <input class="form-control" formControlName="email" name="email" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Phone</label>
+            <input class="form-control" formControlName="number" name="number" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Vehicle Type</label>
+            <select class="form-control" formControlName="vehicle" name="vehicle" type="text">Vehicle
+            <option value="1">Bike</option>
+            <option value="2">Car</option></select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Vehicle Number</label>
+            <input class="form-control" formControlName="numberv" name="numberv" type="text" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <label for="">Time Slot</label>
+            <select class="form-control" formControlName="btime" name="btime" type="text">Vehicle
+            <option value="1">Between 10:00 AM - 12:00 PM</option>
+            <option value="2">Between 12:00 PM - 01:00 PM</option></select>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <div class="col-xs-6">
+            <button class="btn btn-success">Proceed To Book</button>
+              <button class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </form>
+  </div>
+</div>

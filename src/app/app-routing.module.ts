@@ -6,6 +6,7 @@ import { EditComponent } from './user/edit/edit.component';
 import { EditServiceComponent } from './service-center/edit-service/edit-service.component';
 import { SearchComponent } from './user/search/search.component';
 import { AddServiceComponent } from './service-center/add-service/add-service.component';
+import { BookComponent } from "./user/book/book.component";
 
 const app_routes: Routes = [
   // { path: '**', pathMatch: 'full', redirectTo: '' },
@@ -14,7 +15,8 @@ const app_routes: Routes = [
     children:[
       { path:'' , redirectTo:'search-service' , pathMatch:'full'},
       { path:':id/edit',component:EditComponent},
-      { path:'search-service',component:SearchComponent}
+      { path:'search-service',component:SearchComponent},
+      { path:'book',component:BookComponent}
     ]
   },
   { path: 'services', component: ServiceCenterComponent,

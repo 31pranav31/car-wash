@@ -1,2 +1,21 @@
-
-  <router-outlet></router-outlet>
+<div class="row">
+  <div class="col-xs-8">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-xs-4">
+    <h4>My Bookings</h4>
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li *ngFor="let book of bookings; let i = index" class="list-group-item">
+            <h4>{{services[book.center].name}}</h4>
+            <div class="col-xs-8">
+              {{book.time}}
+            </div>
+          </li>
+          <p *ngIf="bookings.length == 0" class="list-group-item pull-center">No Bookings Yet</p>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
