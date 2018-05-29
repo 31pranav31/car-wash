@@ -1,10 +1,16 @@
 <div class="row">
   <div class="col-xs-12">
-    <ul class="list-group">
-      <li *ngFor="let item of services; let i = index" class="list-group-item">
-        <img [src]="item.photo" class="img-responsive" alt="" height="50"/>
-        <span>{{ item.name }}</span>
-      </li>
-    </ul>
+    <a  href="#" *ngFor="let item of services; let i = index" class="list-group-item clearfix" >
+			<div class="pull-left">
+				<h4 class="list-group-item-heading">{{item.name}}</h4>
+				<p class="list-group-item-text">{{item.address}}</p>
+			</div>
+			<span class="pull-right">
+				<img [src]="item.photo" alt="Photo" class="img-responsive" style="max-height: 50px">
+			</span>
+      <div class="pull-left">
+        <button class="btn btn-success" (click)="bookService(+i)">Book Service</button>
+      </div>
+    </a>
   </div>
 </div>
